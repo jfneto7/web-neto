@@ -17,7 +17,7 @@ pipeline {
         
         stage("Deploy"){
             steps{
-                sh 'ssh root@${env.REMOTEHOST} docker-compose up'
+                sh 'ssh root@${env.REMOTEHOST} docker-compose up -d'
             }                       
         }
     }
