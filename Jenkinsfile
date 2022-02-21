@@ -2,11 +2,7 @@ def remoteHost = "192.168.2.82"
 pipeline {
     agent any
     stages{
-        stage ("Git checkout"){
-            steps{
-                git url: 'https://github.com/jfneto7/web-neto.git'
-            }            
-        }
+        
 
         stage ("Test"){
             steps{
