@@ -4,7 +4,7 @@ pipeline {
         
         stage ("Git checkout"){
             steps{
-                sh 'ssh root@192.168.2.82 "if [[ -d /opt/web-neto ]];then cd /opt && git pull; else cd /opt && git clone https://github.com/jfneto7/web-neto.git;fi"'
+                sh 'ssh root@192.168.2.82 "if [[ -d /opt/web-neto ]];then cd /opt/web-neto && git pull; else cd /opt && git clone https://github.com/jfneto7/web-neto.git;fi"'
             }            
         }
 
