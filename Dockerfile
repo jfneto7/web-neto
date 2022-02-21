@@ -1,1 +1,2 @@
-FROM jfneto7/conversao-temperatura:latest
+FROM nginx
+COPY ./index.hml /usr/share/nginx/html
