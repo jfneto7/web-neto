@@ -6,7 +6,7 @@ pipeline {
 
         stage ("Test"){
             steps{
-                sh 'ssh root@${remoteHost} if [[ -f ./Dockerfile ]];then echo "Dockerfile is here!";else echo "[ERROR] DOCKER IS NOT HERE.........;fi"'
+                sh 'ssh root@192.168.2.82 "if [[ -f ./Dockerfile ]];then echo "Dockerfile is here"; else echo "[ERROR] DOCKER IS NOT HERE.........";fi"'
             }            
         }
         
