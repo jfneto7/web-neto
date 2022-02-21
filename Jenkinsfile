@@ -16,7 +16,7 @@ pipeline {
         
         stage("Build"){
             steps{
-                sh 'ssh root@192.168.2.82 "if [[ $(docker container ls | awk {'print $1'}|grep -v CONT) ]];then docker stop $(docker container ls | awk {'print $1'}|grep -v CONT);fi"'
+                sshCommand remote: root@192.168.2.82, command: "if [[ $(docker container ls | awk {'print $1'}|grep -v CONT) ]];then docker stop $(docker container ls | awk {'print $1'}|grep -v CONT);fi"
             }                       
         }
         
