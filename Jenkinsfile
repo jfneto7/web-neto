@@ -16,7 +16,7 @@ pipeline {
         
         stage("Build"){
             steps{
-                sshCommand remote: root@192.168.2.82, command: "echo $HOSTNAME"
+                sh 'ssh root@192.168.2.82 "echo $HOSTNAME"'
             }                       
         }
         
