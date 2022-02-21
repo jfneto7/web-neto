@@ -5,8 +5,7 @@ pipeline {
         
         stage ("Git checkout"){
             steps{
-                sh 'ssh root@192.168.2.82 cd /opt'
-                sh 'ssh root@192.168.2.82 "git clone https://github.com/jfneto7/web-neto.git"'
+                sh 'ssh root@192.168.2.82 "cd /opt && git clone https://github.com/jfneto7/web-neto.git"'
             }            
         }
 
